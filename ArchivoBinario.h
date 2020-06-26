@@ -14,14 +14,14 @@ class ArchivoBinario : public Archivo
 	public:
 		ArchivoBinario(string);
 		
-	//	virtual bool guardarAlumno(Alumno*);
+	//	virtual bool guardarAlumno(Soldado*);
 		virtual bool guardarPersona(Persona*);
 		virtual bool abrirEscritura(int);
 		
 		
 		virtual bool abrirLectura();
 	//virtual vector<Alumno*> leerAlumnos();
-		virtual vector<Persona*> leerPersonas();
+		virtual vector<Soldado*> leerSoldados();
 		
 	protected:
 };

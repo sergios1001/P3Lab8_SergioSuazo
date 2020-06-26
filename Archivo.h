@@ -20,8 +20,7 @@ class Archivo
 	public:
 		Archivo(string);
 		//escritura / salida
-		virtual bool guardarAlumno(Alumno*);
-		virtual bool guardarPersona(Persona*);
+		virtual bool guardarSoldado(Soldado*);
 		virtual bool abrirEscritura(int);
 		bool cerrarEscritura();
 		//lectura /entrada
@@ -36,7 +35,7 @@ class Archivo
 		//cargar todos los registros en vector de apuntadores
 		//--persona
 		//--alumno
-		virtual vector<Alumno*> leerAlumnos();
+		virtual vector<Soldado*> leerAlumnos();
 		virtual vector<Persona*> leerPersonas();
 		
 		

@@ -21,7 +21,7 @@ bool ArchivoBinario::abrirEscritura(int modo){
 }
 
 
-vector<Persona*> ArchivoBinario::leerPersonas(){
+vector<Soldado*> ArchivoBinario::leerPersonas(){
 	 vector<Persona*> retValue;
 	 
 	 
