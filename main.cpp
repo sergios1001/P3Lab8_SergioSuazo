@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int menu(){
@@ -14,7 +14,7 @@ int menu(){
 			<<"4.- Guardar Soldados"<<endl
 			<<"5.- Cargar Soldados"<<endl
 			<<"6.- Simulacion"<<endl
-			<<"7.- Salr"<<endl
+			<<"7.- Salir"<<endl
 			<<"Ingrese una opcion entre 1 y 7: ";
 			
 			cin>>retValue;
