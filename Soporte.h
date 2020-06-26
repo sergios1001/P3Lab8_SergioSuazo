@@ -6,7 +6,7 @@
 class Soporte : public Soldado
 {
 	public:
-		Soporte(int,int,int,int);
+		Soporte(int,int,int,int,string);
 		
 		int Atacar(bool);
 		void Defender(int,bool);

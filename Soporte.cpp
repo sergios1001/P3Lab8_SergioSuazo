@@ -1,6 +1,6 @@
 #include "Soporte.h"
 
-Soporte::Soporte(int blindaje,int camuflaje,int vida,int fuerza):Soldado(vida,fuerza)
+Soporte::Soporte(int blindaje,int camuflaje,int vida,int fuerza,string nombre):Soldado(nombre,vida,fuerza)
 {
 	this->blindaje=blindaje;
 	this->camuflaje=camuflaje;

@@ -1,6 +1,6 @@
 #include "Ataque.h"
 
-Ataque::Ataque(int velocidad,int extra,int vida,int fuerza):Soldado(vida,fuerza)
+Ataque::Ataque(int velocidad,int extra,int vida,int fuerza,string nombre):Soldado(nombre,vida,fuerza)
 {
 	this->velocidad=velocidad;
 	this->extra=extra;

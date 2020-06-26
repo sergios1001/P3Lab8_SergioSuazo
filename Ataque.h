@@ -6,7 +6,7 @@
 class Ataque : public Soldado
 {
 	public:
-		Ataque(int,int,int,int);
+		Ataque(int,int,int,int,string);
 		
 		int Atacar(bool);
 		void Defender(int,bool);

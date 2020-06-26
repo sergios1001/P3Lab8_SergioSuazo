@@ -1,13 +1,15 @@
 #ifndef SOLDADO_H
 #define SOLDADO_H
-
+#include <string>
+using namespace std;
 class Soldado
 {
 	public:
-		Soldado(int,int);
+		Soldado(string,int,int);
 		int getVida();
 		void setVida(int);
 		int getFuerza();
+		string getNombre();
 		
 		virtual int Atacar(bool);
 		virtual void Defender(int,bool);
@@ -15,6 +17,7 @@ class Soldado
 		~Soldado();
 	protected:
 		int vida,fuerza;
+		string nombre;
 };
 
 #endif
