@@ -1,4 +1,7 @@
 #include "ArchivoBinario.h"
+#include "Soldado.h"
+#include "Ataque.h"
+#include "Soporte.h"
 
 ArchivoBinario::ArchivoBinario(string fileName):Archivo(fileName)
 {

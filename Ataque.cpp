@@ -27,6 +27,14 @@ void Ataque::Defender(int damage,bool tipo)
 	}
 }
 
+int Ataque::getVelocidad(){
+	return velocidad;
+}
+
+int Ataque::getExtra(){
+	return extra;
+}
+
 Ataque::~Ataque()
 {
 }

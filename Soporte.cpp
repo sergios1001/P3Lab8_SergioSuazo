@@ -27,6 +27,14 @@ void Soporte::Defender(int damage,bool tipo){
 	}
 }
 
+int Soporte::getBlindaje(){
+	return blindaje;
+}
+
+int Soporte::getCamuflaje(){
+	return camuflaje;
+}
+
 Soporte::~Soporte()
 {
 }

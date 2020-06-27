@@ -10,10 +10,13 @@ class Soporte : public Soldado
 		
 		int Atacar(bool);
 		void Defender(int,bool);
+		int getBlindaje();
+		int getCamuflaje();
 		
 		~Soporte();
 	protected:
 		int blindaje, camuflaje;
+		friend class ArchivoBinario;
 };
 
 #endif

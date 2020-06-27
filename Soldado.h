@@ -18,6 +18,7 @@ class Soldado
 	protected:
 		int vida,fuerza;
 		string nombre;
+		friend class ArchivoBinario;
 };
 
 #endif

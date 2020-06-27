@@ -46,3 +46,5 @@ class Archivo
 		ifstream inputFile;
 		
 };
+
+#endif
