@@ -1,8 +1,7 @@
 #ifndef ARCHIVO_H
 #define ARCHIVO_H
 
-#include "Persona.h"
-#include "Alumno.h"
+#include "Soldado.h"
 
 #include <string>
 using std::string;
@@ -20,7 +19,7 @@ class Archivo
 	public:
 		Archivo(string);
 		//escritura / salida
-		virtual bool guardarSoldado(Soldado*);
+		virtual bool guardarSoldado(Soldado*,int );
 		virtual bool abrirEscritura(int);
 		bool cerrarEscritura();
 		//lectura /entrada
@@ -33,10 +32,8 @@ class Archivo
 		
 		//Leer todos los registros del archivo
 		//cargar todos los registros en vector de apuntadores
-		//--persona
-		//--alumno
-		virtual vector<Soldado*> leerAlumnos();
-		virtual vector<Persona*> leerPersonas();
+
+		virtual vector<Soldado*> leerSoldados();
 		
 		
 		

@@ -1,10 +1,13 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <fstream>
 #include <stdlib.h>  
 #include "Soldado.h"
 #include "Ataque.h"
 #include "Soporte.h"
+#include "Archivo.h"
+#include "ArchivoBinario.h"
 
 using namespace std;
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
@@ -202,10 +205,68 @@ int main(int argc, char** argv) {
 				
 				break;
 			}
-			case 4:{
+			case 4:{//guardar soldados
+				ArchivoBinario* soldados1 = new ArchivoBinario("Equipo1.bin");
+	
+				soldados1->abrirEscritura(0);
+				for(int i=0;i<equipo1.size();i++)
+				{
+					int tipo=0;
+					Ataque *sA = dynamic_cast<Ataque*>(equipo1[i]);
+						if(sA == 0)
+						{
+							tipo = 1;
+							soldados1->guardarSoldado(equipo1[i],tipo);
+						}
+						else
+						{
+							tipo = 2;
+							soldados1->guardarSoldado(equipo1[i],tipo);
+						}
+				}
+				soldados1->cerrarEscritura(); //buffer flush
+				
+				ArchivoBinario* soldados2 = new ArchivoBinario("Equipo2.bin");
+	
+				soldados2->abrirEscritura(0);
+				for(int i=0;i<equipo2.size();i++)
+				{
+					int tipo=0;
+					Ataque *sA = dynamic_cast<Ataque*>(equipo2[i]);
+						if(sA == 0)
+						{
+							tipo = 1;
+							soldados2->guardarSoldado(equipo2[i],tipo);
+						}
+						else
+						{
+							tipo = 2;
+							soldados2->guardarSoldado(equipo2[i],tipo);
+						}
+				}
+				soldados2->cerrarEscritura(); //buffer flush
+				
+				cout<<"Se guardaron los soldados exitosamente"<<endl;
+				
 				break;
 			}
-			case 5:{
+			case 5:{// cargar soldados
+					
+					//equipo1
+					ArchivoBinario* binFile;
+					equipo1.clear();
+					binFile = new ArchivoBinario("Equipo1.bin");
+					binFile->abrirLectura();
+					equipo1 = binFile->leerSoldados();
+					binFile->cerrarLectura();
+					
+					//equipo2
+					ArchivoBinario* binFile2;
+					equipo2.clear();
+					binFile2 = new ArchivoBinario("Equipo2.bin");
+					binFile2->abrirLectura();
+					equipo2 = binFile2->leerSoldados();
+					binFile2->cerrarLectura();
 				break;
 			}
 			case 6:{

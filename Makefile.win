@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o Soldado.o Ataque.o Soporte.o
-LINKOBJ  = main.o Soldado.o Ataque.o Soporte.o
+OBJ      = main.o Soldado.o Ataque.o Soporte.o ArchivoBinario.o Archivo.o
+LINKOBJ  = main.o Soldado.o Ataque.o Soporte.o ArchivoBinario.o Archivo.o
 LIBS     = -L"D:/Program Files/Dev-Cpp/MinGW64/lib" -L"D:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"D:/Program Files/Dev-Cpp/MinGW64/include" -I"D:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"D:/Program Files/Dev-Cpp/MinGW64/include" -I"D:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -35,3 +35,9 @@ Ataque.o: Ataque.cpp
 
 Soporte.o: Soporte.cpp
 	$(CPP) -c Soporte.cpp -o Soporte.o $(CXXFLAGS)
+
+ArchivoBinario.o: ArchivoBinario.cpp
+	$(CPP) -c ArchivoBinario.cpp -o ArchivoBinario.o $(CXXFLAGS)
+
+Archivo.o: Archivo.cpp
+	$(CPP) -c Archivo.cpp -o Archivo.o $(CXXFLAGS)
